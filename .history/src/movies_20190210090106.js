@@ -7,34 +7,41 @@
 // }
 //   console.log("haha" + turnHoursToMinutes(movies.duration));
 
- var HoursAndMinutes = movies.forEach(function(movie) {
- var movieTitle = movie.title;
+// var myJSON = JSON.stringify(movies.duration);
+// console.log(myJSON);
+
+// function turnHoursToMinutes(array) {
+
+//   duration : function() {
+//     return this.firstName + " " + this.lastName;
+//   }
+// }
+
+
+function TurnHoursAndMinutes () {
+
+ movies.forEach(function(movie) {
+  var movieTitle = movie.title;
  var convict = movie.duration.replace(/[^0-9\.]/g, '');
 
 
- var newHa = parseInt(convict.slice(0,1));
- var newMin = parseInt(convict.slice(1,3));
+var newHa = parseInt(convict.slice(0,1));
+
+  var newMin = parseInt(convict.slice(1,3));
+  // console.log(newMin);
 
     var result = 0;
     var newNum = 0;
-   if (newHa >= 1) {
-    newHa *= 60;
-    newNum += newHa;
- }  result += newNum + newMin;
-
-// console.log(movieTitle + " lasts " + result + " minutes long." );
-
-convict = result;
-movie.duration = convict + "min";
-// console.log(movie.duration);
-// console.log(convict);
-// console.log(movieTitle + " lasts " + convict + " minutes long." );
+ if (newHa >= 1) {
+  newHa *= 60;
+  newNum += newHa;
+ }
+result += newNum + newMin;
+console.log(movieTitle + " lasts " + result + " minutes long." );
 
  });
 
- let in_json = JSON.stringify(movies);
-console.log(in_json);
-
+}
 
 
 

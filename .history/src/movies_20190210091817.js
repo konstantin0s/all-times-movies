@@ -25,9 +25,9 @@
 // console.log(movieTitle + " lasts " + result + " minutes long." );
 
 convict = result;
-movie.duration = convict + "min";
-// console.log(movie.duration);
-// console.log(convict);
+movie.duration = convict;
+console.log(movie.duration);
+console.log(convict);
 // console.log(movieTitle + " lasts " + convict + " minutes long." );
 
  });

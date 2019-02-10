@@ -25,15 +25,10 @@
 // console.log(movieTitle + " lasts " + result + " minutes long." );
 
 convict = result;
-movie.duration = convict + "min";
-// console.log(movie.duration);
-// console.log(convict);
-// console.log(movieTitle + " lasts " + convict + " minutes long." );
-
+console.log(convict);
+console.log(movieTitle + " lasts " + convict + " minutes long." );
  });
 
- let in_json = JSON.stringify(movies);
-console.log(in_json);
 
 
 
