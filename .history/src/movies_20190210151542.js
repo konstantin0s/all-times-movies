@@ -46,9 +46,8 @@ console.log("Average Of All rates is: " + avg.toFixed(1));
        for (var i = 0; i < movies.length; i++) {
         var result = movies.filter(obj => {
           return obj.genre == "Drama";
-        });}
-        
-
+              
+        })
         console.log(result);
      
         function averageDrama(movie) {
@@ -63,7 +62,7 @@ console.log("Average Of All rates is: " + avg.toFixed(1));
               }
           }
              var avgDrama =  sum / count;
-             return avgDrama.toFixed(1);
+             return avgDrama;
        
       }
 

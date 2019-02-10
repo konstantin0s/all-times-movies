@@ -47,7 +47,7 @@ console.log("Average Of All rates is: " + avg.toFixed(1));
         var result = movies.filter(obj => {
           return obj.genre == "Drama";
         });}
-        
+        s
 
         console.log(result);
      

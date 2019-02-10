@@ -22,8 +22,14 @@
     newNum += newHa;
  }  result += newNum + newMin;
 
+// console.log(movieTitle + " lasts " + result + " minutes long." );
+
 convict = result;
 movie.duration = convict + "min";
+// console.log(movie.duration);
+// console.log(convict);
+// console.log(movieTitle + " lasts " + convict + " minutes long." );
+
  });
 
  let in_json = JSON.stringify(movies);
@@ -42,32 +48,13 @@ console.log("Average Of All rates is: " + avg.toFixed(1));
 
 
 // Get the average of Drama Movies
-// var dramaStore = 0;
-       for (var i = 0; i < movies.length; i++) {
-        var result = movies.filter(obj => {
-          return obj.genre == "Drama";
-        });}
-        
+var dramaMovies =  movies.filter(function(movie) {
+  if ((movie.genre == "Drama")) {
+   var average = movie.genre.reduce((a, b, i, arr) => a + b.length / arr.length, 0)
+      console.log(average);
+  }
+});
 
-        console.log(result);
-     
-        function averageDrama(movie) {
-          var sum = 0,
-              count = 0,
-              i;
-      
-          for (i = 0; i < movie.length; i++) {
-              if (movie[i].genre == 'Drama') {
-                  sum += parseInt(movie[i].rate);
-                  ++count;
-              }
-          }
-             var avgDrama =  sum / count;
-             return avgDrama.toFixed(1);
-       
-      }
-
-      console.log(averageDrama(movies) + " is the average rate");
 
 // Order by time duration, in growing order
 

@@ -63,7 +63,7 @@ console.log("Average Of All rates is: " + avg.toFixed(1));
               }
           }
              var avgDrama =  sum / count;
-             return avgDrama.toFixed(1);
+             return avgDrama;
        
       }
 

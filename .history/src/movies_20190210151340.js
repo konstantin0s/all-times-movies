@@ -43,13 +43,12 @@ console.log("Average Of All rates is: " + avg.toFixed(1));
 
 // Get the average of Drama Movies
 // var dramaStore = 0;
-       for (var i = 0; i < movies.length; i++) {
-        var result = movies.filter(obj => {
-          return obj.genre == "Drama";
-        });}
-        
-
-        console.log(result);
+      //  for (var i = 0; i < movies.length; i++) {
+        // var result = movies.filter(obj => {
+        //   return obj.genre == "Drama";
+              
+        // })
+        // console.log(result);
      
         function averageDrama(movie) {
           var sum = 0,
@@ -63,11 +62,10 @@ console.log("Average Of All rates is: " + avg.toFixed(1));
               }
           }
              var avgDrama =  sum / count;
-             return avgDrama.toFixed(1);
-       
+             console.log("Average rate drama is: " + avgDrama.toFixed(1));
       }
-
-      console.log(averageDrama(movies) + " is the average rate");
+  
+      console.log(averageDrama(movies));
 
 // Order by time duration, in growing order
 

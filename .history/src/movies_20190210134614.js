@@ -22,8 +22,14 @@
     newNum += newHa;
  }  result += newNum + newMin;
 
+// console.log(movieTitle + " lasts " + result + " minutes long." );
+
 convict = result;
 movie.duration = convict + "min";
+// console.log(movie.duration);
+// console.log(convict);
+// console.log(movieTitle + " lasts " + convict + " minutes long." );
+
  });
 
  let in_json = JSON.stringify(movies);
@@ -42,32 +48,40 @@ console.log("Average Of All rates is: " + avg.toFixed(1));
 
 
 // Get the average of Drama Movies
-// var dramaStore = 0;
-       for (var i = 0; i < movies.length; i++) {
-        var result = movies.filter(obj => {
-          return obj.genre == "Drama";
-        });}
-        
 
-        console.log(result);
-     
-        function averageDrama(movie) {
-          var sum = 0,
-              count = 0,
-              i;
-      
-          for (i = 0; i < movie.length; i++) {
-              if (movie[i].genre == 'Drama') {
-                  sum += parseInt(movie[i].rate);
-                  ++count;
-              }
+
+let newMovie = movies;
+newMovie.forEach(function(movie) {
+  var avgDrama = movie.rate;
+  if ((movie.genre == "Drama")) {
+    // avgDrama.push(movies.rate)
+    console.log(avgDrama);
+    var totalDrama = 0;
+       for (var i = 0; i < newMovie.length; i++) {
+            totalDrama += parseInt(movie[i].rate);
+            console.log(totalDrama);
           }
-             var avgDrama =  sum / count;
-             return avgDrama.toFixed(1);
-       
-      }
+  
+  }
+});
+console.log(newMovie);
+  // let avgDrama = [];
+  // if ((movie.genre == "Drama")) {
+  //       avgDrama.push(movies.rate)
+  //       console.log(avgDrama)
+  //       console.log(movies.rate);
+          // var totalDrama = 0;
+          // for (var i = 0; i <= movies.length; i++) {
+          //   totalDrama += parseInt(movies[i].rate);
+          //   console.log(totalDrama);
+          // }
+    // console.log(movie.genre);
+    // console.log(movie.rate);
+  //  var average = parseInt(movie.rate).reduce((a, b, i, arr) => a + b.length / arr.length, 0)
+  //     console.log(average);
+  // }
 
-      console.log(averageDrama(movies) + " is the average rate");
+
 
 // Order by time duration, in growing order
 
