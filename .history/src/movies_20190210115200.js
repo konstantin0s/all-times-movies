@@ -57,17 +57,23 @@ var dramaMovies =  movies.filter(function(movie) {
 
 
 // Order by time duration, in growing order
+// var growingOrder = movies.forEach(function(movie) {
 
-  let newMovieObj = movies;
-  newMovieObj.forEach(function(movie) {
-  movie.duration = movie.duration.replace(/[^0-9\.]/g, '');
+// movies.sort(function(a,b){
 
-  function compare(a,b) {
-    return b.duration - a.duration;
-   }
-   newMovieObj.sort(compare);
+//   return b.duration>a.duration; 
+  
+  
+//   })
+//   console.log(movies.duration);
+// });
+var growingOrder = movies.forEach(function(movie) {
+  var movieDuration = parseInt(movie.duration);
+  // var convict = movie.duration.replace(/[^0-9\.]/g, '');
+console.log(movieDuration);
+
 });
-console.log(newMovieObj);
+// movies.sort((a, b) => (a.color > b.color) ? 1 : -1)
 
 
 // How many movies did STEVEN SPIELBERG

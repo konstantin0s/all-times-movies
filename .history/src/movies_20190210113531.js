@@ -55,19 +55,24 @@ var dramaMovies =  movies.filter(function(movie) {
   }
 });
 
+function mean(movies) { // it's ok to use short variable names in short, simple functions
+    // set all variables at the top, because of variable hoisting
+    var i,
+        sum = 0, // try to use informative names, not "num"
+        len = movies.genre.length; // cache arr.length because accessing it is usually expensive
+        console.log(len);
+    for (i = 0; i < len; i++) { // arrays start at 0 and go to array.length - 1
+        sum += movies[i]; // short for "sum = sum + arr[i];"
+    } // always use brackets. It'll save you headaches in the long run
+    // don't mash your computation and presentation together; return the result.
+    var avge = sum / len;
+    // return sum / len;
+    console.log(avge);
+}
+
+
 
 // Order by time duration, in growing order
-
-  let newMovieObj = movies;
-  newMovieObj.forEach(function(movie) {
-  movie.duration = movie.duration.replace(/[^0-9\.]/g, '');
-
-  function compare(a,b) {
-    return b.duration - a.duration;
-   }
-   newMovieObj.sort(compare);
-});
-console.log(newMovieObj);
 
 
 // How many movies did STEVEN SPIELBERG

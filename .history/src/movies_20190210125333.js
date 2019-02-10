@@ -58,16 +58,63 @@ var dramaMovies =  movies.filter(function(movie) {
 
 // Order by time duration, in growing order
 
-  let newMovieObj = movies;
-  newMovieObj.forEach(function(movie) {
-  movie.duration = movie.duration.replace(/[^0-9\.]/g, '');
+totalz = [];
+for(var i = 0; i < movies.length; i++) {
+   totalz.push(parseInt(movies[i].duration));
+}
 
-  function compare(a,b) {
-    return b.duration - a.duration;
-   }
-   newMovieObj.sort(compare);
-});
-console.log(newMovieObj);
+function compare(a,b) {
+  return b - a;
+}
+
+totalz.sort(compare);
+console.log(totalz);
+
+// var growingOrder = movies.forEach(function(movie) {
+//   // var movieDuration = parseInt(movie.duration);
+//   // var convict = movie.duration.replace(/[^0-9\.]/g, '');
+// // console.log(movieDuration);
+// var sorting = parseInt(movie.duration);
+// // sorting.sort((a, b) => (a > b) ? 1 : -1);
+// console.log(sorting);
+// var newDur = [];
+// newDur.push(sorting);
+// console.log(newDur);
+
+
+
+// });
+
+// movies.forEach(function(movie) {
+//   var sortDuration = movie.duration.replace(/[^0-9\.]/g, '');
+//   // let newDuration = [];
+//   // newDuration.push(sortDuration);
+// console.log(sortDuration);
+// for (var )
+// // var sorting = newDuration.sort((a, b) => (a > b) ? 1 : -1);
+// //   console.log(sorting);
+// });
+
+
+// function compare(a,b) {
+//   if (a.duration < b.duration)
+//     return -1;
+//   if (a.duration > b.duration)
+//     return 1;
+//   return 0;
+// }
+
+// movies.sort(compare);
+
+// for (var duration in movies)
+// var total = [];
+// for(var i = 0; i < movies.length; i++) {
+//    var newArray = total.push(movies[i].title);
+//    console.log(newArray);
+// }
+
+// console.log("duration L" + total);
+// console.log(movieDuration);
 
 
 // How many movies did STEVEN SPIELBERG

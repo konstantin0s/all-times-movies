@@ -57,18 +57,12 @@ var dramaMovies =  movies.filter(function(movie) {
 
 
 // Order by time duration, in growing order
+function compare(a,b) {
+   return b.duration - a.duration;
+}
 
-  let newMovieObj = movies;
-  newMovieObj.forEach(function(movie) {
-  movie.duration = movie.duration.replace(/[^0-9\.]/g, '');
-
-  function compare(a,b) {
-    return b.duration - a.duration;
-   }
-   newMovieObj.sort(compare);
-});
-console.log(newMovieObj);
-
+movies.sort(compare);
+console.log(movies);
 
 // How many movies did STEVEN SPIELBERG
 
