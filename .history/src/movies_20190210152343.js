@@ -89,27 +89,15 @@ console.log(newMovieObj);
     return obj.director == "Steven Spielberg";
   })
   console.log( "Steven Spielberg did " + result.length + " movies");
-  console.log(result);
+  console.log(result)
   // ;}
 
 // Order by title and print the first 20 titles
 let newMovie = movies;
-
-  function compare_to_sort(x,y) 
-  {
-   if (x.title < y.title)
-     return -1;
-   if (x.title > y.title)
-     return 1;
-   return 0;
-  }
-   var sortTitle = newMovie.sort(compare_to_sort);
-   var firstTwenty = 20;
-  for (var i = 0; i < firstTwenty; i++) {
-  var lengthty = sortTitle[i].length;
-               console.log(sortTitle[i]);
+newMovie.forEach(function(movie) {
+movie.title
 }
-
+console.log(newMovie);
 
 
 // Best yearly rate average

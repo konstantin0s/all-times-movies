@@ -94,22 +94,11 @@ console.log(newMovieObj);
 
 // Order by title and print the first 20 titles
 let newMovie = movies;
+newMovie.forEach(function(movie) {
+console.log(movie.title);
+});
 
-  function compare_to_sort(x,y) 
-  {
-   if (x.title < y.title)
-     return -1;
-   if (x.title > y.title)
-     return 1;
-   return 0;
-  }
-   var sortTitle = newMovie.sort(compare_to_sort);
-   var firstTwenty = 20;
-  for (var i = 0; i < firstTwenty; i++) {
-  var lengthty = sortTitle[i].length;
-               console.log(sortTitle[i]);
-}
-
+console.log(newMovie);
 
 
 // Best yearly rate average

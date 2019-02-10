@@ -103,9 +103,9 @@ let newMovie = movies;
      return 1;
    return 0;
   }
-   var sortTitle = newMovie.sort(compare_to_sort);
-   var firstTwenty = 20;
-  for (var i = 0; i < firstTwenty; i++) {
+ var sortTitle = newMovie.sort(compare_to_sort);
+var firstTwenty = 20;
+for (var i = 0; i < firstTwenty; i++) {
   var lengthty = sortTitle[i].length;
                console.log(sortTitle[i]);
 }
