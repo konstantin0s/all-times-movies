@@ -44,7 +44,7 @@ for(var i = 0; i < movies.length; i++) {
    total += parseInt(movies[i].rate);
 }
 var avg = total / movies.length;
-console.log("Average Of All rates is: " + avg.toFixed(1));
+console.log("Average Of All rates is: " + avg);
 
 // Get the average of Drama Movies
 

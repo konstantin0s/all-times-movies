@@ -39,13 +39,16 @@ console.log(in_json);
 
 
 // Get the average of all rates with 2 decimals 
-var total = 0;
-for(var i = 0; i < movies.length; i++) {
-   total += parseInt(movies[i].rate);
-}
-var avg = total / movies.length;
-console.log("Average Of All rates is: " + avg.toFixed(1));
+function getAvg(mov) {
+  movies.forEach(function(movie) { 
 
+  })
+  return movie.rate.reduce(function (p, c) {
+    return p + c;
+  }) / movie.length;
+}
+
+getAvg();
 // Get the average of Drama Movies
 
 
