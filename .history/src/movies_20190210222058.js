@@ -5,43 +5,57 @@
 // ({ title: movie.title, year: movie.year, director: movie.director,
 //    duration: parseInt(movie.duration.split(" ")[0]) * 60 + 
 //    parseInt(movie.duration.split(" ")[1]), genre: movie.genre, rate: movie.rate}));
-//    console.log(newMoviesArray);
 
  var HoursAndMinutes = movies.map(function(movie) {
+
  var convict = movie.duration.replace(/[^0-9\.]/g, '');
+
+
  var newHa = parseInt(convict.slice(0,1));
  var newMin = parseInt(convict.slice(1,3));
+
     var result = 0;
     var newNum = 0;
    if (newHa >= 1) {
     newHa *= 60;
     newNum += newHa;
  }  result += newNum + newMin;
-    convict = result;
-    movie.duration = convict + "min";
+
+convict = result;
+movie.duration = convict + "min";
  });
 
-  let in_json = JSON.stringify(movies);
-  console.log(in_json);
+ let in_json = JSON.stringify(movies);
+console.log(in_json);
 
 
 
 
 // Get the average of all rates with 2 decimals 
 var total = 0;
-for (var i = 0; i < movies.length; i++) {
-    total += parseInt(movies[i].rate);
+for(var i = 0; i < movies.length; i++) {
+   total += parseInt(movies[i].rate);
 }
 var avg = total / movies.length;
 console.log("Average Of All rates is: " + avg.toFixed(1));
 
 
 // Get the average of Drama Movies
-      function averageDrama(movie) {
+// var dramaStore = 0;
+      //  for (var i = 0; i < movies.length; i++) {
+      //   var result = movies.filter(obj => {
+      //     return obj.genre == "Drama";
+      //   });}
+        
+
+        console.log(result);
+     
+        function averageDrama(movie) {
           var sum = 0,
               count = 0,
               i;
-              for (i = 0; i < movie.length; i++) {
+      
+          for (i = 0; i < movie.length; i++) {
               if (movie[i].genre == 'Drama') {
                   sum += parseInt(movie[i].rate);
                   ++count;
@@ -49,29 +63,33 @@ console.log("Average Of All rates is: " + avg.toFixed(1));
           }
              var avgDrama =  sum / count;
              return avgDrama.toFixed(1);
+       
       }
- console.log(averageDrama(movies) + " is the average rate");
+
+      console.log(averageDrama(movies) + " is the average rate");
 
 // Order by time duration, in growing order
- let newMovieObj = movies;
-     newMovieObj.forEach(function(movie) {
-     movie.duration = movie.duration.replace(/[^0-9\.]/g, '');
+
+  let newMovieObj = movies;
+  newMovieObj.forEach(function(movie) {
+  movie.duration = movie.duration.replace(/[^0-9\.]/g, '');
 
   function compare(a,b) {
-     return a.duration - b.duration;
+    return a.duration - b.duration;
    }
-     newMovieObj.sort(compare);
+   newMovieObj.sort(compare);
 });
 console.log(newMovieObj);
 
 
 // How many movies did STEVEN SPIELBERG
- var result = movies.filter(obj => {
+// for (var i = 0; i < movies.length; i++) {
+  var result = movies.filter(obj => {
     return obj.director == "Steven Spielberg";
   })
   console.log( "Steven Spielberg did " + result.length + " movies");
   console.log(result);
-
+  // ;}
 
 // Order by title and print the first 20 titles
 let newMovie = movies;
