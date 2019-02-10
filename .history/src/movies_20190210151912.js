@@ -84,13 +84,10 @@ console.log(newMovieObj);
 
 
 // How many movies did STEVEN SPIELBERG
-// for (var i = 0; i < movies.length; i++) {
+for (var i = 0; i < movies.length; i++) {
   var result = movies.filter(obj => {
     return obj.director == "Steven Spielberg";
-  })
-  console.log( "Steven Spielberg did " + result.length + " movies");
-  console.log(result)
-  // ;}
+  });}
 
 // Order by title and print the first 20 titles
 

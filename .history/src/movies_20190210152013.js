@@ -88,8 +88,7 @@ console.log(newMovieObj);
   var result = movies.filter(obj => {
     return obj.director == "Steven Spielberg";
   })
-  console.log( "Steven Spielberg did " + result.length + " movies");
-  console.log(result)
+  console.log(result);
   // ;}
 
 // Order by title and print the first 20 titles
